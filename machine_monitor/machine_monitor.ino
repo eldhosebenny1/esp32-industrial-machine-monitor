@@ -92,9 +92,9 @@ void setup() {
   server.begin();
 
   Serial.println();
-  Serial.println("======================================");
+  
   Serial.println("   INDUSTRIAL MACHINE MONITOR");
-  Serial.println("======================================");
+ 
   Serial.println();
   Serial.println("Web dashboard is ready.");
   Serial.println("WiFi name: machine");
@@ -489,11 +489,12 @@ void triggerFault(const char* reason) {
   webMachineStarted = false;
 
   Serial.println();
-  Serial.println("======================================");
+  
   Serial.println("       MACHINE STOPPED");
   Serial.print("Reason: ");
   Serial.println(reason);
-  Serial.println("======================================");
+
+  
 
   digitalWrite(RELAY_PIN, RELAY_OFF);
   digitalWrite(BUZZER_PIN, HIGH);
